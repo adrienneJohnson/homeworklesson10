@@ -2,7 +2,7 @@ Amazon
 
 Customers 
 id: 		integer (primary key)
-first_name: string
+first_name:	string
 last_name: 	string
 email: 		string
 (one Customer to many Orders, one Customer to many Reviews, many Customers to many Addresses)
@@ -36,10 +36,10 @@ address_id:  integer (foreign key)
 customer_id: integer (foreign key)
 
 Products
-id:			integer
+id:			integer	(primary key)
 product_id:	integer (foreign key)
 
 ProductReviews
-id:		    integer
-product_id: integer
-review_id:  integer
+id:		    integer (primary key)
+product_id: integer (foreign key)
+review_id:  integer (foreign key)
