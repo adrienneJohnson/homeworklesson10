@@ -1,0 +1,45 @@
+Amazon 
+
+Customers 
+id: 		integer (primary key)
+first_name: string
+last_name: 	string
+email: 		string
+(one Customer to many Orders, one Customer to many Reviews, many Customers to many Addresses)
+
+Orders 
+id:			  integer (primary key)
+customer_id:  integer (foreign key)
+product_id:	  integer (foreign key)
+purchased_on: datetime
+shipped_on:	  datetime
+(one Order to many Products)
+
+Reviews
+id:			 integer (primary key)
+customer_id: integer (foreign key)
+product_id:	 string (foreign key)
+created_at:	 datetime
+review:		 text
+(many Reviews to many Products)
+
+Addresses
+id:		integer (primary key)
+street:	string
+city:	string
+state:	string
+zip:	string
+
+CustomerAddresses 
+id:			 integer (primary key)
+address_id:  integer (foreign key)
+customer_id: integer (foreign key)
+
+Products
+id:			integer
+product_id:	integer (foreign key)
+
+ProductReviews
+id:		    integer
+product_id: integer
+review_id:  integer
